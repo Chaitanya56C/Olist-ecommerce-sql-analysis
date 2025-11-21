@@ -41,14 +41,14 @@ SELECT * FROM orders LIMIT 20;
 SELECT o.order_id, c.customer_city
 FROM orders o
 INNER JOIN customers c ON o.customer_id = c.customer_id;
-3.Aggregate Query
+3. Aggregate Query
 SELECT SUM(payment_value) AS total_revenue
 FROM order_payments;
-4.Subquery
+4. Subquery
 SELECT order_id, payment_value
 FROM order_payments
 WHERE payment_value > (SELECT AVG(payment_value) FROM order_payments);
-5.Create View
+5. Create View
 CREATE VIEW monthly_revenue AS
 SELECT MONTH(order_purchase_timestamp) AS month,
        SUM(payment_value) AS total_revenue
