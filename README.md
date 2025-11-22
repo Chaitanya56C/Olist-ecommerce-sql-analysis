@@ -36,7 +36,7 @@ Used Table Data Import Wizard in MySQL Workbench.
 
 ## Sample SQL Queries
 1. Basic Query
-SELECT * FROM orders LIMIT 20;
+ SELECT * FROM orders LIMIT 20;
 2. Join Query
 SELECT o.order_id, c.customer_city
 FROM orders o
