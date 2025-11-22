@@ -36,20 +36,20 @@ Used Table Data Import Wizard in MySQL Workbench.
 
 ## Sample SQL Queries
 1. Basic Query
- SELECT * FROM orders LIMIT 20;
+- SELECT * FROM orders LIMIT 20;
 2. Join Query
-SELECT o.order_id, c.customer_city
+- SELECT o.order_id, c.customer_city
 FROM orders o
 INNER JOIN customers c ON o.customer_id = c.customer_id;
 3. Aggregate Query
-SELECT SUM(payment_value) AS total_revenue
+- SELECT SUM(payment_value) AS total_revenue
 FROM order_payments;
 4. Subquery
-SELECT order_id, payment_value
+- SELECT order_id, payment_value
 FROM order_payments
 WHERE payment_value > (SELECT AVG(payment_value) FROM order_payments);
 5. Create View
-CREATE VIEW monthly_revenue AS
+- CREATE VIEW monthly_revenue AS
 SELECT MONTH(order_purchase_timestamp) AS month,
        SUM(payment_value) AS total_revenue
 FROM orders
